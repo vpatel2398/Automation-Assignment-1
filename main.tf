@@ -61,3 +61,15 @@ module "vmwindows" {
       module.common, module.network
     ]
 }
+
+module "datadisk" {
+    source = "./modules.datadisk"
+    rg = module.rgroup.rg-name
+    location = module.rgroup.rg-location
+    linux_ids = module.vmlinux.linux_ids
+    win_ids = module.vmwindows.win_ids
+    tags = var.tags
+    depends_on = [
+      module.vmlinux, module.vmwindows
+    ]
+}
