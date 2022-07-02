@@ -73,3 +73,14 @@ module "datadisk" {
       module.vmlinux, module.vmwindows
     ]
 }
+
+module "loadbalancer" {
+  source = "./modules/loadbalancer"
+  rg = module.rgroup.rg-name
+  location = module.rgroup.rg-location
+  tags = var.tags
+  vm_linux_interface = module.vmlinux.linux_net_interface
+  depends_on = [
+    module.vmlinux
+  ]
+}

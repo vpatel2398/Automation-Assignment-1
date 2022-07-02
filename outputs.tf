@@ -56,3 +56,8 @@ output "windows_public_IP" {
 output "win_dns_label" {
   value = module.vmwindows.win_dns_label
 }
+
+# loadbalancer
+output "lb_name" {
+    value = module.loadbalancer.lb_name
+}
