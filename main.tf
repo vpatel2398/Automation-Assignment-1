@@ -84,3 +84,16 @@ module "loadbalancer" {
     module.vmlinux
   ]
 }
+
+module "database" {
+  source = "./modules/database"
+  rg = module.rgroup.rg-name
+  location = module.rgroup.rg-location
+  server_name = "n01529156-DBserver"
+  username = "vivek-n01529156"
+  password = "Vivek@143"
+  tags = var.tags
+  depends_on = [
+    module.rgroup
+  ]
+}

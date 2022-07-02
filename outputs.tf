@@ -61,3 +61,8 @@ output "win_dns_label" {
 output "lb_name" {
     value = module.loadbalancer.lb_name
 }
+
+# database
+output "db_name" {
+    value = module.database.db_name
+}
