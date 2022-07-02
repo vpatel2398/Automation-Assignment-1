@@ -41,9 +41,18 @@ output "linux_public_IP" {
 output "dns_label" {
   value = module.vmlinux.dns_label
 }
-output "linux_id" {
-    value = module.vmlinux.linux_id
+
+
+# vm windows
+output "windows_vm" {
+  value = module.vmwindows.windows_vm
 }
-output "linux_net_interface" {
-    value = module.vmlinux.linux_net_interface
+output "windows_private_IP" {
+    value = module.vmwindows.windows_private_IP
+}
+output "windows_public_IP" {
+    value = module.vmwindows.windows_public_IP
+}
+output "win_dns_label" {
+  value = module.vmwindows.win_dns_label
 }
