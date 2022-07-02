@@ -2,7 +2,7 @@ variable "tags" {
     type = map(any)
 }
 variable "linux_name" {
-  default = "n01529156-db1-u-vm1"
+  default = "n01529156linux"
 }
 variable "size" {
   default = ""

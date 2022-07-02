@@ -90,8 +90,8 @@ module "database" {
   rg = module.rgroup.rg-name
   location = module.rgroup.rg-location
   server_name = "n01529156-dbserver"
-  username = "vivek-n01529156"
-  password = "Vivek@143"
+  username = "psqladmin"
+  password = "H@Sh1CoR3!"
   tags = var.tags
   depends_on = [
     module.rgroup

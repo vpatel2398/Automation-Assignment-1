@@ -45,6 +45,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
   disable_password_authentication = false
   tags                            = var.tags
 
+  availability_set_id = azurerm_availability_set.avail_set.id
   network_interface_ids = [
     element(azurerm_network_interface.net_interface[*].id, count.index + 1)
   ]

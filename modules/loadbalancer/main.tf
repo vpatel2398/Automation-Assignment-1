@@ -20,7 +20,7 @@ resource "azurerm_public_ip" "public_ip" {
 resource "azurerm_network_interface_backend_address_pool_association" "lb_association" {
     count = var.nb_count
     network_interface_id = var.linux_net_interface[count.index]
-    ip_configuration_name = "${var.vm_linux_name}-ipconfig-${format("1%d", count.index+1)}"
+    ip_configuration_name = "${var.vm_linux_name}-ipconfig1-${format("%1d", count.index + 1)}"
     backend_address_pool_id = azurerm_lb_backend_address_pool.backend_pool.id
 
 }
