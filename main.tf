@@ -14,3 +14,10 @@ module "rgroup" {
     tags = var.tags
 
 }
+
+module "network" {
+    source = "./modules/network"
+    rg = module.rgroup.rg-name
+    location = module.rgroup.rg-location
+    tags = var.tags
+}
