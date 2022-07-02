@@ -21,7 +21,7 @@ variable "linux_disk_id" {
     type = list(string)
 }
 variable "win_disk_id" {
-    type = list(string)
+    type = string
 }
 variable "disk_caching" {
     default = "ReadWrite"

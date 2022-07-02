@@ -1,4 +1,5 @@
 variable "rg" {
+    default = "common-rg"
     type = string
     description = "Rg name" 
 }

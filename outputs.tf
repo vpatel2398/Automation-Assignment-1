@@ -8,7 +8,7 @@ output "rg-location" {
 
 # Network
 output "vnet" {
-    value = module.network.vnet.name
+    value = module.network.vnet
 }
 output "subnet" {
     value = module.network.subnet
@@ -19,7 +19,7 @@ output "subnet_id" {
 
 # common
 output "lworkshop-name" {
-    value = module.common.lworkspace.name
+    value = module.common.lworkspace-name
 }
 output "saccount-name" {
     value = module.common.saccount-name

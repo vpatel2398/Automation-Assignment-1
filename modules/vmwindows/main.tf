@@ -71,7 +71,7 @@ resource "azurerm_windows_virtual_machine" "vm2" {
 }
 
 resource "azurerm_virtual_machine_extension" "vmextension" {
-    name  = "${var.windows_name}-vmex-${format("%1d", count.index + 1)}"
+    name  = "${var.windows_name}-vmex"
     publisher = var.vmextension["publisher"]
     virtual_machine_id = azurerm_windows_virtual_machine.vm2.id 
     type = var.vmextension["type"]

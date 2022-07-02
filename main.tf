@@ -66,8 +66,8 @@ module "datadisk" {
     source = "./modules/datadisk"
     rg = module.rgroup.rg-name
     location = module.rgroup.rg-location
-    linuxlinux_disk_id = module.vmlinux.linux_ids
-    win_win_disk_id = module.vmwindows.win_ids
+    linux_disk_id = module.vmlinux.linux_id
+    win_disk_id = module.vmwindows.vmwinid
     tags = var.tags
     depends_on = [
       module.vmlinux, module.vmwindows

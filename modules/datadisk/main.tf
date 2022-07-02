@@ -21,17 +21,17 @@ resource "azurerm_managed_disk" "w_disk" {
 
 resource "azurerm_virtual_machine_data_disk_attachment" "l_disk_attach" {
     count = var.nb_count
-    virtual_machine_id = var.linux_disk_ids[count.index]
+    virtual_machine_id = var.linux_disk_id [count.index]
     managed_disk_id = element(azurerm_managed_disk.l_disk[*].id, count.index + 1)
     lun = var.lun
     caching = var.disk_caching
-    tags = var.tags
+    
 }
 
 resource "azurerm_virtual_machine_data_disk_attachment" "w_disk_attach" {
-    virtual_machine_id = var.win_disk_ids
+    virtual_machine_id = var.win_disk_id
     managed_disk_id = azurerm_managed_disk.w_disk.id
     lun = var.lun
     caching = var.disk_caching
-    tags = var.tags
+    
 }

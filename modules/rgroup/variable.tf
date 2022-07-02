@@ -1,5 +1,5 @@
 variable "name" {
-    default = "rg"
+    
     type = string
     description = "Rg name" 
 }

@@ -21,7 +21,7 @@ variable "password" {
     default = ""
 }
 variable "windows_name" {
-    default = "win_name"
+    default = "winname"
 }
 variable "windows_avs" {
     default = "WindowsAvailabilityset"
