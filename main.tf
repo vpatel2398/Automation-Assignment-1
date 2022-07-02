@@ -20,4 +20,15 @@ module "network" {
     rg = module.rgroup.rg-name
     location = module.rgroup.rg-location
     tags = var.tags
+    depends_on = [
+      module.rgroup
+    ]
 }
+module "common" {
+    source = "./modules/common"
+    rg = module.rgroup.rg-name
+    location = module.rgroup.rg-location
+    saccount-name = "n01529156sacc1"
+    tags = var.tags
+}
+

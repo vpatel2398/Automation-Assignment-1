@@ -16,3 +16,14 @@ output "subnet" {
 output "subnet_id" {
     value = module.network.subnet_id
 }
+
+# common
+output "lworkshop-name" {
+    value = module.common.lworkspace.name
+}
+output "saccount-name" {
+    value = module.common.saccount-name
+}
+output "vault-name" {
+    value = module.common.vault-name
+}

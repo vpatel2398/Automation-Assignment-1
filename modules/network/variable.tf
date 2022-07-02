@@ -1,5 +1,4 @@
 variable "rg" {
-  default     = "network-rg"
   type = string
   description = "Network resource group"
 }
