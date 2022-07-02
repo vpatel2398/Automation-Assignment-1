@@ -27,3 +27,23 @@ output "saccount-name" {
 output "vault-name" {
     value = module.common.vault-name
 }
+
+# vm linux
+output "linux_vm" {
+  value = module.vmlinux.linux_vm
+}
+output "linux_private_IP" {
+    value = module.vmlinux.linux_private_IP
+}
+output "linux_public_IP" {
+    value = module.vmlinux.linux_public_IP
+}
+output "dns_label" {
+  value = module.vmlinux.dns_label
+}
+output "linux_id" {
+    value = module.vmlinux.linux_id
+}
+output "linux_net_interface" {
+    value = module.vmlinux.linux_net_interface
+}
