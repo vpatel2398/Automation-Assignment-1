@@ -79,7 +79,7 @@ module "loadbalancer" {
   rg = module.rgroup.rg-name
   location = module.rgroup.rg-location
   tags = var.tags
-  vm_linux_interface = module.vmlinux.linux_net_interface
+  linux_net_interface = module.vmlinux.linux_net_interface
   depends_on = [
     module.vmlinux
   ]
@@ -89,7 +89,7 @@ module "database" {
   source = "./modules/database"
   rg = module.rgroup.rg-name
   location = module.rgroup.rg-location
-  server_name = "n01529156-DBserver"
+  server_name = "n01529156-dbserver"
   username = "vivek-n01529156"
   password = "Vivek@143"
   tags = var.tags

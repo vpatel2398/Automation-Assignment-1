@@ -15,5 +15,5 @@ variable "password" {
   default = ""
 }
 variable "server_name" {
-    default = ""
+    type = string
 }
