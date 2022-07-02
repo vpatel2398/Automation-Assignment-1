@@ -63,7 +63,7 @@ module "vmwindows" {
 }
 
 module "datadisk" {
-    source = "./modules.datadisk"
+    source = "./modules/datadisk"
     rg = module.rgroup.rg-name
     location = module.rgroup.rg-location
     linux_ids = module.vmlinux.linux_ids
